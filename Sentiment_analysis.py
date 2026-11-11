@@ -31,7 +31,10 @@ nltk.download("stopwords", quiet=True)
 
 # Load Dataset
 dataset = "/Users/anyem/Downloads/Labelled_stories.txt"
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
+dataset = BASE_DIR / "Labelled_stories.txt"
 with open(dataset, "r", encoding="UTF-8") as file:
     lines = file.readlines()
 
