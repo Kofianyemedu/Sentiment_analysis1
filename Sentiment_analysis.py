@@ -242,9 +242,8 @@ def page3():
                     with result_col1:
                         st.write(f"Sentiment is: 😊 {prediction[0]}")
 
-                    with result_col2:
-                        image = Image.open("sabinus2.png")
-                        st.image(image,width=250)
+                    
+                        
 
                 # NEGATIVE SENTIMENT
                 else:
@@ -253,9 +252,7 @@ def page3():
                     with result_col1:
                         st.write(f"Sentiment is: ☹️ {prediction[0]}" )
 
-                    with result_col2:
-                        image1 = Image.open( "sabinus.png")
-                        st.image(image1, width=250)
+                   
 
             except Exception as e:
                 st.error(f"Prediction failed: {str(e)}")
